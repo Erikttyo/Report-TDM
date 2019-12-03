@@ -139,18 +139,6 @@ public class TransaksiFragment extends Fragment {
                 initiateScan();
             }
         });
-        btnPajak.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showDialogPajak();
-            }
-        });
-        btnDiskon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showDialogDiskon();
-            }
-        });
 
         /*dialog.show();
         getListBarang();*/
@@ -435,62 +423,6 @@ public class TransaksiFragment extends Fragment {
                 }
             }
         });
-    }
-
-    public void showDialogPajak(){
-        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getContext());
-
-        LayoutInflater inflater = this.getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.dialog_pajak, null);
-        dialogBuilder.setView(dialogView);
-
-        TextView txTitle = (TextView) dialogView.findViewById(R.id.tx_dialog_title);
-        final EditText edtPajak = (EditText) dialogView.findViewById(R.id.edt_pajak_dialog);
-        edtPajak.setText(((Toko)tinyDB.getObject("toko_login", Toko.class)).getPajak());
-        dialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                pajak = edtPajak.getText().toString();
-            }
-        });
-
-        dialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
-
-        AlertDialog alertDialog = dialogBuilder.create();
-        alertDialog.show();
-    }
-
-    public void showDialogDiskon(){
-        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getContext());
-
-        LayoutInflater inflater = this.getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.dialog_diskon, null);
-        dialogBuilder.setView(dialogView);
-
-        TextView txTitle = (TextView) dialogView.findViewById(R.id.tx_dialog_title);
-        final EditText edtDiskon = (EditText) dialogView.findViewById(R.id.edt_diskon_dialog);
-        edtDiskon.setText(((Toko)tinyDB.getObject("toko_login", Toko.class)).getDiskon());
-        dialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                diskon = edtDiskon.getText().toString();
-            }
-        });
-
-        dialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
-
-        AlertDialog alertDialog = dialogBuilder.create();
-        alertDialog.show();
     }
 
     @Override

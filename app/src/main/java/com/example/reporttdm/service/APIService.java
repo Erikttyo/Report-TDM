@@ -1,11 +1,7 @@
 package com.example.reporttdm.service;
 
 import com.example.reporttdm.model.Barang;
-import com.example.reporttdm.model.GetAkunKasResponse;
 import com.example.reporttdm.model.GetBarangResponse;
-import com.example.reporttdm.model.GetHutPitResponse;
-import com.example.reporttdm.model.GetKartuHutangResponse;
-import com.example.reporttdm.model.GetKasResponse;
 import com.example.reporttdm.model.GetKategoriResponse;
 import com.example.reporttdm.model.GetPelSupResponse;
 import com.example.reporttdm.model.GetPembelianResponse;
@@ -135,23 +131,12 @@ public interface APIService {
                                       @Field("telephone") String telephone,
                                       @Field("alamat") String alamat);
 
-    @FormUrlEncoded
-    @POST("showHutangPiutang.php")
-    Call<GetHutPitResponse> showHutangPiutang(@Field("id_toko") String id_toko);
 
     @FormUrlEncoded
     @POST("getToko.php")
     Call<GetTokoResponse> getToko(@Field("id") String id);
 
-    @FormUrlEncoded
-    @POST("setPajak.php")
-    Call<InsertResponse> setPajak(@Field("id_toko") String id_toko,
-                                  @Field("pajak") String pajak);
 
-    @FormUrlEncoded
-    @POST("setDiskon.php")
-    Call<InsertResponse> setDiskon(@Field("id_toko") String id_toko,
-                                   @Field("diskon") String diskon);
 
     @FormUrlEncoded
     @POST("updateToko.php")
@@ -198,21 +183,7 @@ public interface APIService {
     @POST("deletePesanan.php")
     Call<InsertResponse> deletePesanan(@Field("id_transaksi") String id_transaksi);
 
-    @FormUrlEncoded
-    @POST("showListHutPit.php")
-    Call<GetKartuHutangResponse> showListHutPit(@Field("id_hutpit") String id_hutpit);
 
-    @FormUrlEncoded
-    @POST("bayarPiutang.php")
-    Call<InsertResponse> bayarPiutang(@Field("id_toko") String id_toko,
-                                      @Field("id_hutpit") String id_hutpit,
-                                      @Field("nilai") String nilai);
-
-    @FormUrlEncoded
-    @POST("bayarHutang.php")
-    Call<InsertResponse> bayarHutang(@Field("id_toko") String id_toko,
-                                     @Field("id_hutpit") String id_hutpit,
-                                     @Field("nilai") String nilai);
 
     @FormUrlEncoded
     @POST("deleteBarang.php")
@@ -239,39 +210,7 @@ public interface APIService {
     Call<GetBarangResponse> showListTransaksi(@Field("id_toko") String id_toko,
                                               @Field("id_transaksi") String id_transaksi);
 
-    @FormUrlEncoded
-    @POST("showKas.php")
-    Call<GetKasResponse> showKas(@Field("id_toko") String id_toko);
 
-    @FormUrlEncoded
-    @POST("addKas.php")
-    Call<InsertResponse> addKas(@Field("id_toko") String id_toko,
-                                @Field("id_akun_kas") String id_akun_kas,
-                                @Field("nominal") String nominal,
-                                @Field("tanggal") String tanggal,
-                                @Field("keterangan") String keterangan,
-                                @Field("jenis") String jenis);
-
-    @FormUrlEncoded
-    @POST("showAkunKas.php")
-    Call<GetAkunKasResponse> showAkunKas(@Field("id_toko") String id_toko);
-
-    @FormUrlEncoded
-    @POST("addAkunKas.php")
-    Call<InsertResponse> addAkunKas(@Field("id_toko") String id_toko,
-                                    @Field("nama") String nama);
-
-    @FormUrlEncoded
-    @POST("deleteAkunKas.php")
-    Call<InsertResponse>  deleteAkunKas(@Field("id_akun_kas") String id_akun_kas);
-
-    @FormUrlEncoded
-    @POST("mutasiKas.php")
-    Call<InsertResponse> mutasiKas(@Field("id_toko") String id_toko,
-                                   @Field("nominal") String nominal,
-                                   @Field("tanggal") String tanggal,
-                                   @Field("id_akun_kas_ke") String id_akun_kas_ke,
-                                   @Field("id_akun_kas_dari") String id_akun_kas_dari);
 
 
 }

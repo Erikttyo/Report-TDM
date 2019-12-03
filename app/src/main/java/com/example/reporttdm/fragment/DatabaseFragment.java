@@ -12,10 +12,7 @@ import android.widget.Button;
 
 import com.example.reporttdm.R;
 import com.example.reporttdm.activity.DBarangActivity;
-import com.example.reporttdm.activity.DisPajSelectedActivity;
-import com.example.reporttdm.activity.HutPitActivity;
 import com.example.reporttdm.activity.KBarangActivity;
-import com.example.reporttdm.activity.PelSupActivity;
 import com.example.reporttdm.activity.PembelianActivity;
 import com.example.reporttdm.helper.TinyDB;
 import com.example.reporttdm.model.User;
@@ -36,9 +33,6 @@ public class DatabaseFragment extends Fragment {
         btnKatBar = (Button)v.findViewById(R.id.btn_kbrg);
         btnMStok = (Button)v.findViewById(R.id.btn_stok);
         btnPemBar = (Button)v.findViewById(R.id.btn_pbrg);
-        btnPel = (Button)v.findViewById(R.id.btn_pelsup);
-        btnHutPit = (Button)v.findViewById(R.id.btn_hutpit);
-        btnDisPaj = (Button)v.findViewById(R.id.btn_dispaj);
 
         try {
             if (((User)tinyDB.getObject("user_login", User.class)).getTipe().equals("2")){
@@ -84,27 +78,7 @@ public class DatabaseFragment extends Fragment {
                 startActivity(intent);
             }
         });
-        btnPel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), PelSupActivity.class);
-                startActivity(intent);
-            }
-        });
-        btnHutPit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), HutPitActivity.class);
-                startActivity(intent);
-            }
-        });
-        btnDisPaj.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), DisPajSelectedActivity.class);
-                startActivity(intent);
-            }
-        });
+
 
         return v;
     }

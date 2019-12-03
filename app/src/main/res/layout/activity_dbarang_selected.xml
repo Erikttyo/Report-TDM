@@ -123,8 +123,8 @@
                 android:textColorHint="@color/colorPrimary">
                 <EditText
                     android:id="@+id/edt_diskon_dbarangs"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:textColor="#000"
                     android:backgroundTint="@color/cardview_dark_background"
                     android:hint="Diskon"

@@ -5,11 +5,8 @@ import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -20,11 +17,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.reporttdm.R;
-import com.example.reporttdm.adapter.PelSupAdapter;
 import com.example.reporttdm.fragment.DatePickerFragment;
 import com.example.reporttdm.helper.TinyDB;
 import com.example.reporttdm.model.Barang;
-import com.example.reporttdm.model.GetPelSupResponse;
 import com.example.reporttdm.model.InsertResponse;
 import com.example.reporttdm.model.PelSup;
 import com.example.reporttdm.model.Pembelian;
@@ -55,7 +50,6 @@ public class BayarPembelianActivity extends AppCompatActivity {
     LinearLayout layoutJatuhTempo;
     TextView txSuplier;
     RecyclerView recyclerView;
-    PelSupAdapter pelSupAdapter;
     ArrayList<PelSup> pelSupList = new ArrayList<PelSup>();
     private String id_pelsup = "0";
 
@@ -127,22 +121,13 @@ public class BayarPembelianActivity extends AppCompatActivity {
             }
         });
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerListPelsup);
-        pelSupAdapter = new PelSupAdapter(pelSupList,this,"4");
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(BayarPembelianActivity.this, LinearLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(pelSupAdapter);
-
-        dialog.show();
-        getListPelSup();
     }
-
     public void setSupplier(int pos){
         txSuplier.setText("Suplier : "+pelSupList.get(pos).getNama().toString());
         id_pelsup = pelSupList.get(pos).getId_pelsup().toString();
         Toast.makeText(this, "Suplier "+txSuplier.getText().toString()+" dipilih",Toast.LENGTH_SHORT).show();
     }
+
 
     @Override
     public boolean onSupportNavigateUp() {
@@ -184,40 +169,6 @@ public class BayarPembelianActivity extends AppCompatActivity {
         });
     }
 
-    public void getListPelSup(){
-        APIService api = RetrofitHelper.getClient().create(APIService.class);
-        Call<GetPelSupResponse> call = api.showListPelSup(((User)tinyDB.getObject("user_login", User.class)).getId_toko());
-        System.out.println("masuk");
-        call.enqueue(new Callback<GetPelSupResponse>() {
-            @Override
-            public void onResponse(Call<GetPelSupResponse> call, Response<GetPelSupResponse> response) {
-                System.out.println("re : " + response.body().getStatus_code());
-                if (response.body().getStatus_code().equals("1")) {
-                    pelSupList.clear();
-                    for (PelSup ps : response.body().getResult_pelsup()){
-                        if (ps.getTipe().equals("1")){
-                            pelSupList.add(ps);
-                            Log.d("pembelian","nama suplier : "+ps.getNama());
-                        }
-                    }
-                    Log.d("pembelian", "jumlah suplier : "+String.valueOf(pelSupList.size()));
-                    pelSupAdapter.notifyDataSetChanged();
-                    dialog.dismiss();
-                }else{
-                    dialog.dismiss();
-                    Toast.makeText(BayarPembelianActivity.this,"Tidak ada Supplier",Toast.LENGTH_SHORT).show();
-                }
-            }
-            @Override
-            public void onFailure(Call<GetPelSupResponse> call, Throwable t) {
-                if (t instanceof SocketTimeoutException) {
-                    dialog.dismiss();
-                    Toast.makeText(BayarPembelianActivity.this, "Harap periksa koneksi internet", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-    }
-
     private void showDatePicker() {
         DatePickerFragment date = new DatePickerFragment();
         /**
@@ -238,9 +189,6 @@ public class BayarPembelianActivity extends AppCompatActivity {
             }
         };
 
-        /**
-         * Set Call back to capture selected date
-         */
         date.setCallBack(onDateSetListener);
         date.show(getSupportFragmentManager(),"Jatuh Tempo");
     }
