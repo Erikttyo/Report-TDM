@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.reporttdm">
+
+    <uses-permission android:required="true" android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:required="true" android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait" tools:replace="screenOrientation" />
+        <activity android:name=".MainActivity">
+
+        </activity>
+        <activity
+            android:name=".activity.RegisterAkunActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.RegisterTokoActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.MenuActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.LaporanActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.DBarangActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.DBarangSelectedActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.KBarangActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.PembelianActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.BayarPembelianActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.ListTransaksiActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.InputBayarActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.ProfileActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.TokoActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.PelSupActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.ListPelSupActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.PelSupSelectedActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.HutPitActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.ListHutPitActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.DisPajSelectedActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.CreateUserActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.ListUserActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.PrintStruk2Activity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.PrintStrukActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.DeviceList"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.LaporanStokActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.BerhasilBayarActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.PickDeviceList"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.PickDeviceActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.KartuHutPitActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.LaporanTransaksiActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.HistoryTransaksiActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.ArusKasActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.AddKasActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.MutasiKasActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.AkunKasActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <provider
+            android:name=".helper.GenericFileProvider"
+            android:authorities="${applicationId}.my.package.name.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+    </application>
+
+</manifest>

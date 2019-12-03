@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:padding="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tx_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profile User"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:padding="8dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:id="@+id/tx_nama_pu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/tx_email_pu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/tx_notelp_pu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No. Telephone"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/tx_alamat_pu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alamat"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/tx_tipe_pu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tipe"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"/>
+    </LinearLayout>
+</LinearLayout>

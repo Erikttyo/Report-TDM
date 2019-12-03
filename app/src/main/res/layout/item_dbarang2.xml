@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cardview_dark_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="4dp"
+    android:layout_margin="4dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="4dp">
+        <ImageView
+            android:id="@+id/img_dbarang2"
+            android:layout_width="56dp"
+            android:padding="0dp"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_picture"/>
+        <ImageView
+            android:id="@+id/img_dbarang"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_height="100dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tx_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="BR"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:background="@color/colorPrimary"
+                android:textColor="#fff"
+                android:textSize="20sp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="0dp"
+                android:paddingStart="0dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tx_namatrans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama"
+                    android:gravity="top"
+                    android:textSize="12sp"
+                    android:textColor="#000"/>
+                <TextView
+                    android:id="@+id/tx_belitrans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:visibility="gone"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+                <TextView
+                    android:id="@+id/tx_stoktrans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Stok : 10"
+                    android:gravity="bottom"
+                    android:textSize="12sp" />
+                <TextView
+                    android:id="@+id/tx_hargatrans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Rp. 1000"
+                    android:gravity="bottom"
+                    android:textSize="12sp"
+                    android:textColor="#000"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

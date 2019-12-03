@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+    <include layout="@layout/toolbar_menu"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:weightSum="7"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:paddingStart="8dp"
+        android:paddingRight="8dp"
+        android:paddingEnd="8dp">
+        <EditText
+            android:id="@+id/edt_searchdb"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:background="#fff"
+            android:layout_weight="5"
+            android:hint="Search"
+            android:singleLine="true"
+            android:textColorHint="@color/colorPrimaryDark"/>
+
+        <ImageButton
+            android:id="@+id/btn_search-barang"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_search" />
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageButton
+                android:id="@+id/btn_grid_barang"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_grid"/>
+            <ImageButton
+                android:id="@+id/btn_list_barang"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_list"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+        <android.support.v4.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swipeDBarang"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recyclerDBarang"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_dbarang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom|right"
+            android:layout_margin="16dp"
+            app:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ic_add2" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+    <include layout="@layout/toolbar_menu"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="26sp"
+            android:layout_marginBottom="8dp"
+            android:text="Transaksi Berhasil"/>
+        <TextView
+            android:id="@+id/tx_kembalian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"
+            android:text="Kembalian : Rp. "/>
+        <Button
+            android:id="@+id/btn_transaksi_ulang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_reload"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:textColor="#fff"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimary"
+            android:text="Transaksi lagi"/>
+        <Button
+            android:id="@+id/btn_cetak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_print"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:textColor="#fff"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimary"
+            android:text="Cetak struk"/>
+        <Button
+            android:id="@+id/btn_share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_share"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:textColor="#fff"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimary"
+            android:text="Share struk"/>
+    </LinearLayout>
+</LinearLayout>

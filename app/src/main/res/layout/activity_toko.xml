@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+    <include layout="@layout/toolbar_menu"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center|top"
+        android:padding="16dp">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary">
+            <EditText
+                android:id="@+id/edt_nama_toko"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:singleLine="true"
+                android:backgroundTint="@color/cardview_dark_background"
+                android:hint="Nama Toko"
+                android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary">
+            <EditText
+                android:id="@+id/edt_namap_toko"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:singleLine="true"
+                android:backgroundTint="@color/cardview_dark_background"
+                android:hint="Nama Pemilik"
+                android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary">
+            <EditText
+                android:id="@+id/edt_lokasi_toko"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:backgroundTint="@color/cardview_dark_background"
+                android:hint="Lokasi"
+                android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary">
+            <EditText
+                android:id="@+id/edt_telpon_toko"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:singleLine="true"
+                android:backgroundTint="@color/cardview_dark_background"
+                android:hint="No. Telepon"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
+        <Button
+            android:id="@+id/btn_simpan_toko"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#fff"
+            android:background="@color/colorPrimary"
+            android:text="Simpan"/>
+    </LinearLayout>
+</LinearLayout>

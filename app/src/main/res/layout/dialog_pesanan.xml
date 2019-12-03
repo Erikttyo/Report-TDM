@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:padding="8dp">
+    <TextView
+        android:id="@+id/tx_pay_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tambah Pesanan"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:padding="16dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"/>
+    <EditText
+        android:id="@+id/edt_nama_pesanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:inputType="text"
+        android:singleLine="true"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:hint="Nama pesanan"/>
+    <EditText
+        android:id="@+id/edt_pemesan_pesanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:inputType="text"
+        android:singleLine="true"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:hint="Nama pemesan"/>
+    <EditText
+        android:id="@+id/edt_meja_pesanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:inputType="number"
+        android:singleLine="true"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:hint="Meja pesanan"/>
+    <EditText
+        android:id="@+id/edt_orang_pesanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:inputType="number"
+        android:singleLine="true"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:hint="Jumlah orang"/>
+    <EditText
+        android:id="@+id/edt_ket_pesanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:inputType="text"
+        android:singleLine="true"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:hint="Keterangan"/>
+</LinearLayout>
